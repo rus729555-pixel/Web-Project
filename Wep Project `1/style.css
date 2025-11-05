@@ -52,7 +52,7 @@ a {
 }
 
 
-/*     Start - Home {1}     */
+/*     Start - Home {1}    7 */
 
 .home{
     background: url(img/anastase-maragos-9dzWZQWZMdE-unsplash.jpg);
@@ -410,6 +410,6 @@ span {
 .footer .copyright {
     margin-top: 20px;
     text-align: center;
-    font-size: 16px;
+    font-size: 17px;
     color: var(--text-color);
 }
