@@ -33,7 +33,13 @@ span {
     color: var(--main-color);
 }
 
-/* NAVBAR */
+/* FOOTER + NAVBAR */
+.footer{
+    background-color: var(--plans-color)!important;
+}
+.navbar{
+    background-color: var(--plans-color)!important;
+}
 .navbar a{
     transition: all 0.5s ease;
     border-bottom: 3px solid transparent;
@@ -62,65 +68,3 @@ span {
   box-shadow: none !important;
 }
 
-
-/*     Start - Home {1}     */
-.home {
-  background: url(../img/Home\ Page.jpg) center/cover no-repeat;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-}
-
-.home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
-
-.home .container {
-  position: relative;
-  z-index: 2;
-}
-
-
-.btn {
-    border: none;
-    color: var(--main-color);
-    box-shadow: none;
-    transition: 0.5s ease;
-}
-
-.btn:hover{
-    background-color: var(--main-color) !important;
-    color: var(--text-color) !important;
-    box-shadow: 0 0 1.6rem var(--main-color);
-}
-/*     Start - product {2}     */
-
-.img-cover { 
-    object-fit: cover; 
-}
-
-
-.product-card { 
-    transition: transform .2s ease, 
-    box-shadow .2s ease; 
-}
-.product-card:hover { 
-    transform: translateY(-4px); 
-    box-shadow: 0 .5rem 1rem 
-    rgba(0,0,0,.15); }
-
-.cart-btn { 
-    opacity: 0.95; 
-}
-
-/*     Start - Plans {4}     */
-#plans{
-    background-color: var(--plans-color);
-}
-
-/*     End - Plans - (4)    */
-
-/*     Start - Review {5}     */
