@@ -65,7 +65,7 @@ span {
 
 /*     Start - Home {1}     */
 .home {
-  background: url(../img/anastase-maragos-9dzWZQWZMdE-unsplash.jpg) center/cover no-repeat;
+  background: url(../img/Home\ Page.jpg) center/cover no-repeat;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -101,6 +101,7 @@ span {
 .img-cover { 
     object-fit: cover; 
 }
+
 
 .product-card { 
     transition: transform .2s ease, 
