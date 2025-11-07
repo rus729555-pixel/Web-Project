@@ -14,17 +14,34 @@
 })();
 
 function controlNavbar() {
-  const isLoggedIn = !!localStorage.getItem("alphaUser");
-  const navLinks = document.querySelectorAll(".navbar-nav .nav-item");
+  const savedUser = JSON.parse(localStorage.getItem("alphaUser"));
+  const isLoggedIn = !!savedUser;
 
-  navLinks.forEach((li) => {
-    const linkText = li.textContent.trim();
-    const alwaysVisible = ["Home", "Making of", "Our Story"];
+  const home = document.querySelector('a[href="/Templates/index.html"]')?.closest("li");
+  const products = document.querySelector('a[href="/Templates/products.html"]')?.closest("li");
+  const workout = document.querySelector('a[href="/Templates/workout.html"]')?.closest("li");
+  const nutrition = document.querySelector('a[href="/Templates/Nutrition.html"]')?.closest("li");
+  const makingof = document.querySelector('a[href="/Templates/makingof.html"]')?.closest("li");
+  const story = document.querySelector('a[href="/Templates/story.html"]')?.closest("li");
 
-    if (alwaysVisible.includes(linkText)) {
-      li.classList.remove("d-none");
-    } else {
-      li.classList.toggle("d-none", !isLoggedIn);
+  [home, products, workout, nutrition, makingof, story].forEach((li) =>
+    li?.classList.add("d-none")
+  );
+
+home?.classList.remove("d-none");
+makingof?.classList.remove("d-none");
+story?.classList.remove("d-none");
+
+if(!isLoggedIn) return;
+
+products?.classList.remove("d-none");
+
+  if (savedUser.plan) {
+    if (savedUser.plan === "Basic") {
+      workout?.classList.remove("d-none");
+    } else if (savedUser.plan === "Pro" || savedUser.plan === "Premium") {
+      workout?.classList.remove("d-none");
+      nutrition?.classList.remove("d-none");
     }
-  });
+  }
 }
