@@ -40,13 +40,16 @@ object-fit: cover;
 }
 
 .product-card {
+    background-color: var(--plans-color);
+    color: white;
     transition: transform .2s ease, 
     box-shadow .2s ease; 
 }
 .product-card:hover { 
     transform: translateY(-4px); 
     box-shadow: 0 .5rem 1rem 
-    rgba(0,0,0,.15); }
+    var(--main-color); 
+  }
 
 .cart-btn { 
     opacity: 0.95; 
@@ -56,9 +59,16 @@ object-fit: cover;
 #plans{
     background-color: var(--plans-color);
 }
-
+.planbg{
+  background-color: black;
+  color: var(--text-color);
+}
 /*     End - Plans - (4)    */
-
+/* Start - review */
+#review{
+  background-color: var(--plans-color);
+}
+/* End review*/
 /*     Start - login {5}     */
 .login {
   background: transparent;
