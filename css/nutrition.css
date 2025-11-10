@@ -1,0 +1,33 @@
+/* start results */
+#result-calories,
+#result-protein,
+#result-carbs,
+#result-fats {
+  color: var(--main-color);
+  transition: 0.3s ease;
+}
+
+.show-results {
+  transform: scale(1.1);
+}
+
+.nutritionResults {
+    background-color: var(--plans-color);
+    color: white;
+    transition: transform .2s ease, box-shadow .2s ease; 
+}
+
+.nutritionResults:hover{
+    transform: translateY(-4px); 
+    box-shadow: 0 .5rem 1rem 
+    var(--main-color); 
+}
+
+/* end results */
+
+/* start calculator */
+.calculator{
+    color: var(--text-color);
+    background-color: var(--plans-color);
+}
+/* end calculator */

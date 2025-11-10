@@ -19,18 +19,7 @@
 }
 
 
-.btn {
-    border: none;
-    color: var(--main-color);
-    box-shadow: none;
-    transition: 0.5s ease;
-}
 
-.btn:hover{
-    background-color: var(--main-color) !important;
-    color: var(--text-color) !important;
-    box-shadow: 0 0 1.6rem var(--main-color);
-}
 /*     Start - product {2}     */
 
 .img-cover{

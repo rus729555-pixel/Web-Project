@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpha GYM — Nutrition</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/nutrition.css">
+</head>
+
+<body>
+  <nav id="navbar-placeholder"></nav>
+  <div class="mt-5 pt-4"></div>
+
+<section class="container my-5">
+  <div class="text-center border-0 p-4 rounded-4 shadow-lg">
+    <div class="card-body">
+      <h2 class="fw-bold text-white">Let's Design a Plan for a Healthier You</h2>     <p class="text-light-emphasis mb-4">Use this simple calculator to plan your nutrition</p>
+      
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+     <div class="col">
+        <div class="p-3 rounded-3 bg-dark text-white bg-opacity-50 nutritionResults">
+           <h5>Calories</h5>
+           <p id="result-calories" class="fs-4 fw-bold">——</p>
+        </div>
+      </div>
+      
+           <div class="col">
+        <div class="p-3 rounded-3 bg-dark text-white bg-opacity-50 nutritionResults">
+           <h5>Protein</h5>
+           <p id="result-protein" class="fs-4 fw-bold">——</p>
+        </div>
+      </div>
+
+           <div class="col">
+        <div class="p-3 rounded-3 bg-dark text-white bg-opacity-50 nutritionResults">
+           <h5>Carbs</h5>
+           <p id="result-carbs" class="fs-4 fw-bold">——</p>
+        </div>
+      </div>
+
+           <div class="col">
+        <div class="p-3 rounded-3 bg-dark text-white bg-opacity-50 nutritionResults">
+           <h5>Fats</h5>
+           <p id="result-fats" class="fs-4 fw-bold">——</p>
+        </div>
+      </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="container my-5">
+  <div class="border-0 rounded-4 p-3 shadow-lg calculator">
+    <div id="error-msg" class="alert alert-danger text-center mt-3 d-none" role="alert"></div>
+
+    <h2 class="text-center">Nutrition Calculator</h2>
+
+<form id="nutritionForm">
+
+<div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center text-center">
+ 
+  <div class="col">
+    <label for="gender" class="form-label fw-semibold" >gender</label>
+    <select class="form-control" id="gender">
+      <option value="" disabled selected>Select gender</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
+
+
+<div class="col">
+  <label for="age" class="form-label fw-semibold">Age</label>
+  <input type="number" id="age" class="form-control" placeholder="Enter your age" min="10" max="100">
+</div>
+
+<div class="col">
+  <label for="height" class="form-label fw-semibold">Height</label>
+  <input type="number" id="height" class="form-control" placeholder="Enter your height (cm)" min="100" max="250">
+</div>
+
+
+<div class="col">
+  <label for="weight" class="form-label fw-semibold">Weight</label>
+  <input type="number" id="weight" class="form-control" placeholder="Enter your weight (kg)" min="30" max="300">
+</div>
+
+<div class="col">
+  <label for="activity" class="form-label fw-semibold">Activity</label>
+  <select class="form-control" id="activity">
+    <option value="" disabled selected>Select activity</option>
+    <option>Little or no activity (BMR)</option>
+    <option>Light: exercise 1-3 times/week</option>
+    <option>Moderate: exercise 4-5 times/week</option>
+    <option>Active: exercise 6-7 times/week</option>
+  </select>
+</div>
+  </div>
+  <button type="submit" id="calBTN" class="btn d-block mx-auto mt-4 px-4">Calculate</button>
+  </form>
+</div>
+</section>
+
+<script src="../js/checkProtocol.js"></script>
+<script src="/js/checker.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="/js/navbar.js"></script>
+
+<script src="/js/nutrition.js"></script>
+</body>
+</html>

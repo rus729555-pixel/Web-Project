@@ -24,24 +24,23 @@ function controlNavbar() {
   const makingof = document.querySelector('a[href="/Templates/makingof.html"]')?.closest("li");
   const story = document.querySelector('a[href="/Templates/story.html"]')?.closest("li");
 
-  [home, products, workout, nutrition, makingof, story].forEach((li) =>
-    li?.classList.add("d-none")
-  );
+  [home, products, workout, nutrition, makingof, story].forEach(li => li?.classList.add("d-none"));
 
-home?.classList.remove("d-none");
-makingof?.classList.remove("d-none");
-story?.classList.remove("d-none");
+  home?.classList.remove("d-none");
+  makingof?.classList.remove("d-none");
+  story?.classList.remove("d-none");
 
-if(!isLoggedIn) return;
+  if (!isLoggedIn) return;
 
-products?.classList.remove("d-none");
+  products?.classList.remove("d-none");
+  workout?.classList.remove("d-none");
+  nutrition?.classList.remove("d-none");
 
-  if (savedUser.plan) {
-    if (savedUser.plan === "Basic") {
-      workout?.classList.remove("d-none");
-    } else if (savedUser.plan === "Pro" || savedUser.plan === "Premium") {
-      workout?.classList.remove("d-none");
-      nutrition?.classList.remove("d-none");
-    }
+  if (savedUser.plan?.toLowerCase() === "basic" || !savedUser.plan) {
+    nutrition?.querySelector("a")?.classList.add("text-secondary");
+    nutrition?.querySelector("a")?.classList.add("disabled-link");
+  } else {
+    nutrition?.querySelector("a")?.classList.remove("text-secondary");
+    nutrition?.querySelector("a")?.classList.remove("disabled-link");
   }
 }
