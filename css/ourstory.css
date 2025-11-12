@@ -1,0 +1,9 @@
+.imgborder{
+  background-color: var(--plans-color) !important;
+  transition: transform .2s ease, box-shadow .2s ease !important; 
+}
+
+.imgborder:hover{
+  transform: translateY(-4px) !important; 
+  box-shadow: 0 .5rem 1rem var(--main-color) !important; 
+}
