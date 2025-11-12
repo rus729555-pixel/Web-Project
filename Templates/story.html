@@ -17,8 +17,8 @@
   <div class="container">
     <div class="row align-items-center g-4">
       <div class="col-12 col-lg-7">
-        <h2 class="fw-bold mb-3">Project Summary</h2>
-        <p class="text-secondary mb-0">
+        <h2 class="fw-bold mb-3"><span>Project Summary</span></h2>
+        <p class="mb-0">
         We created a user-friendly, fully-responsive multiple-page website for Athletica
         Gym leveraging the power of Bootstrap 5. The branded header has a sticker navbar
         with links to Home, Products, Facilities, Nutrition, Making of and Our Story.
@@ -50,8 +50,8 @@
   <div class="container">
     <div class="row align-items-center g-5 justify-content-between">
       <div class="col-12 col-lg-6 col-xl-7 order-lg-2">
-        <h1 class="fw-bold mb-2">Project Challenges &amp; Resolutions</h1>
-        <p class="text-body mb-4">
+        <h1 class="fw-bold mb-2"><span>Project Challenges &amp; Resolutions</span></h1>
+        <p class="mb-4">
           Below are the key issues we faced during development and the concrete steps we took to resolve them.
           Our aim was to keep the notes concise and easy to scan while documenting fixes we can reuse across
           the project. By standardizing how we serve assets, optimize images, structure responsive layouts,
@@ -60,36 +60,35 @@
           and help prevent the same problems from resurfacing as the codebase grows.
         </p>
 
-        <h2 class="h5 fw-semibold mb-1">Running from Local File Paths</h2>
-        <p class="text-body">
+        <h2 class="h5 fw-semibold mb-1 text-warning">Running from Local File Paths</h2>
+        <p>
           During the development phase, we kept running into weird problems whenever we opened the site using the file:// protocol.
           Changing into a local HTTP server (like Live Server or Vite preview) solved the issue all components loaded perfectly, 
           images used the right paths, and the development matched the behavior of a real, published website.
         </p>
 
-        <h2 class="h5 fw-semibold mb-1">Image Clarity &amp; Scaling</h2>
-        <p class="text-body">
+        <h2 class="h5 fw-semibold mb-1 text-warning">Image Clarity &amp; Scaling</h2>
+        <p>
           Some assets were low-resolution or stretched beyond their native size. We replaced weak images with
-          higher-resolution WebP/AVIF where possible, enforced stable aspect ratios with Bootstrap’s
-          <code>ratio-*</code> utilities (e.g., <code>ratio-4x3</code>, <code>ratio-1x1</code>), and applied
-          <code>img-fluid</code> to prevent overflow. When needed, we used <code>object-fit: cover</code> to avoid
+          higher-resolution WebP/AVIF where possible, enforced stable aspect ratios with Bootstrap's
+          ratio-* utilities (e.g., ratio-4x3, ratio-1x1), and applied
+          img-fluid to prevent overflow. When needed, we used object-fit: cover to avoid
           distortion and added lazy loading to improve performance on mobile networks.
         </p>
 
-        <h2 class="h5 fw-semibold mb-1">Responsiveness Across Devices</h2>
-        <p class="text-body">
-          Early layouts didn't adapt cleanly at every breakpoint. We refactored with the
-          <code>container</code>/<code>row</code>/<code>col-*</code> grid, used <code>row-cols-*</code> to control
-          gallery density, and balanced spacing with utilities like <code>g-*</code> and <code>py-*</code>. We verified
-          behavior across multiple viewport widths and devices, checking keyboard navigation and zoom to ensure a
-          usable, accessible experience.
+        <h2 class="h5 fw-semibold mb-1 text-warning">Responsiveness Across Devices</h2>
+        <p >
+          Early layouts didn't adapt cleanly at every breakpoint. 
+          We were relying on manual lg, md, and sm settings, which caused sections to shift or scale incorrectly on different screens.
+          We refactored using the container/row/col-* grid, applied row-cols-* to control gallery density, and balanced spacing with utilities like g-* and py-*. 
+          We tested across multiple viewport widths, checking keyboard navigation and zoom, to ensure a stable and accessible experience.
         </p>
 
-        <h2 class="h5 fw-semibold mb-1">Debugging &amp; Stability</h2>
-        <p class="text-body mb-0">
+        <h2 class="h5 fw-semibold mb-1 text-warning">Debugging &amp; Stability</h2>
+        <p class="mb-0">
         Our first major problem was the login system, since it was the first JavaScript we ever wrote. 
-        We didn't know how to apply proper validation rules—like enforcing a minimum name length, requiring an
-        8-digit password, or showing clear error messages—so the login flow was unstable and didn't behave as expected.
+        We didn't know how to apply proper validation rules like enforcing a minimum name length, requiring an
+        8-digit password, or showing clear error messages so the login flow was unstable and didn't behave as expected.
         </p>
       </div>
 
@@ -137,12 +136,15 @@
 
         <h2 class="h4 fw-semibold mb-2">Front-end development</h2>
         <p class="text-body mb-3">
-          We moved beyond “it works” to “it’s accessible, maintainable, and consistent.” In HTML, we used semantic structure with clear headings, landmarks, and alt text to improve accessibility and SEO. In CSS, we kept selectors shallow, avoided specificity fights, and leaned on Bootstrap utilities for spacing, layout, and typography so components stay unified. Media stayed crisp using responsive images (<code>img-fluid</code>) and stable aspect ratios via Bootstrap’s <code>ratio</code> helpers. In JavaScript, we preferred smaller, pure functions, added null checks before DOM operations, and standardized error handling and formatting—making the codebase easier to review and extend.
+          We moved beyond “it works” to “it’s accessible, maintainable, and consistent.” In HTML, we used semantic structure with clear headings, landmarks, and alt text to improve accessibility and SEO. In CSS, we kept selectors shallow, avoided specificity fights, and leaned on Bootstrap utilities for spacing, layout, and typography so components stay unified. Media stayed crisp using responsive images (<code>img-fluid</code>) and stable aspect ratios via Bootstrap's <code>ratio</code> helpers. In JavaScript, we preferred smaller, pure functions, added null checks before DOM operations, and standardized error handling and formatting making the codebase easier to review and extend.
         </p>
 
         <h2 class="h4 fw-semibold mb-2">Collaboration & communication</h2>
         <p class="text-body mb-3">
-          We set clear roles, held short daily stand-ups, and tracked work on a simple Kanban (Backlog → Doing → Review → Done). Feature branches and pull requests formed a reliable review loop with checklists covering functionality, UX, accessibility, and responsiveness. Descriptive commit messages and pair programming on tricky areas (navbar logic, auth flow) reduced defects and spread knowledge. Async comments kept momentum high while documenting decisions.
+        Our communication was straightforward and effective. 
+        We divided the work by setting clear roles: each member took ownership of a specific page, one focused on the JavaScript logic, another handled design improvements, and another reviewed the project and removed unnecessary code. 
+        We kept each other updated through short check-ins and shared progress as tasks were completed. Our final meeting was the longest, lasting almost five hours, where we refined the project together and made sure everything was consistent before submission. 
+        This approach helped us stay organized, avoid duplicated work, and maintain a unified style across all pages.
         </p>
 
         <h2 class="h4 fw-semibold mb-2">Responsive design with Bootstrap</h2>
@@ -152,7 +154,7 @@
 
         <h2 class="h4 fw-semibold mb-2">Problem-solving</h2>
         <p class="text-body mb-0">
-          Our debug loop: reproduce → isolate → hypothesize → test → fix → regression check. DevTools were central—DOM inspection, network throttling, performance profiling, Lighthouse audits, and the Coverage tab for unused CSS/JS. We used console tracing and breakpoints to follow event flows, and for cross-feature issues we built minimal reproductions. Small “unit-like” checks and targeted console assertions helped prevent repeat bugs as the project grew.
+          When something broke whether it was file:// issues, stretched images, weird layouts, or the login form we reproduced the bug, changed one thing, and tested again. We mainly used DevTools (console errors, element inspector, and responsive view) plus simple console.log() checks to see where the logic failed. After each fix, we quickly re-tested the main pages and the login/register flow to make sure nothing else was accidentally broken.
         </p>
       </div>
 

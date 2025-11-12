@@ -15,19 +15,36 @@ submitBTN.addEventListener("click", (e) => {
   e.preventDefault();
 
   const firstName = document.getElementById("firstName").value.trim();
-  const lastName = document.getElementById("lastName").value.trim();
-  const phone = document.getElementById("phone").value.trim();
+  const lastName  = document.getElementById("lastName").value.trim();
+  const email     = document.getElementById("email").value.trim();   // 👈 NEW
+  const phone     = document.getElementById("phone").value.trim();
 
   let msg = "";
-  if (firstName.length < 3 || lastName.length < 3) msg += "First and Last name must have at least 3 characters.<br>";
-  if (phone.length !== 8 || isNaN(phone)) msg += "Phone must contain exactly 8 digits.";
+
+  if (firstName.length < 3 || lastName.length < 3) {
+    msg += "First and Last name must have at least 3 characters.<br>";
+  }
+
+  // very simple email check
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    msg += "Please enter a valid email address.<br>";
+  }
+
+  if (phone.length !== 8 || isNaN(phone)) {
+    msg += "Phone must contain exactly 8 digits.";
+  }
 
   if (msg) {
     error.innerHTML = msg;
     error.classList.remove("d-none");
     error.style.color = "red";
   } else {
-    localStorage.setItem("alphaUser", JSON.stringify({ firstName, lastName, phone }));
+    // 👇 save email as well
+    localStorage.setItem(
+      "alphaUser",
+      JSON.stringify({ firstName, lastName, email, phone })
+    );
     location.reload();
   }
 });
@@ -40,16 +57,18 @@ function makeWelcomeCard(user) {
         <div class="p-4 rounded bg-dark bg-opacity-75 text-white mt-4 shadow">
           <div class="text-warning fw-semibold text-uppercase small mb-2">Welcome to Alpha Gym</div>
           <div class="fs-4 fw-bold mb-1">${user.firstName} ${user.lastName}</div>
+          <div class="text-secondary mb-1">Email: ${user.email}</div>   <!-- 👈 NEW -->
           <div class="text-secondary mb-2">Mobile: ${user.phone}</div>
           <hr class="border-light my-3"/>
           <div class="fw-semibold d-flex flex-column align-items-center mb-2">
-          <p id="planMessage"></p>
-          <ul>
-          <li id=planList></i>
-          </ul>
-          <p class="beforePLAN">Find the Plan That Fits Your Fitness Journey</p>
-          <a class="btn btn-warning text-dark fw-semibold mb-2 signin beforePLAN" href="#plans">Explore Your Plans</a>
-          <button id="logoutBtn" class="btn btn-outline-light signin">Logout</button>
+            <p id="planMessage"></p>
+            <ul>
+              <li id="planList"></li>
+            </ul>
+            <p class="beforePLAN">Find the Plan That Fits Your Fitness Journey</p>
+            <a class="btn btn-warning text-dark fw-semibold mb-2 signin beforePLAN" href="#plans">Explore Your Plans</a>
+            <button id="logoutBtn" class="btn btn-outline-light signin">Logout</button>
+          </div>
         </div>
       </div>
     </div>

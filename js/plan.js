@@ -54,11 +54,12 @@ function showCurrentPlan(planName) {
   planMsg.innerHTML = `You are currently in the <span class="text-warning">${planName} Plan</span>`;
 
   const planBenefits = {
-    Basic: ["gym subscription", "workout plans"],
-    Pro: ["gym subscription", "workout plans", "Nutrition & Lifestyle"],
+    Basic: ["gym subscription", "Facilities", "Products"],
+    Pro: ["gym subscription", "Facilities", "Products", "Nutrition & Lifestyle"],
     Premium: [
       "gym subscription",
-      "workout plans",
+      "Facilities",
+      "Producs",
       "Nutrition & Lifestyle",
       "Sauna access",
     ],

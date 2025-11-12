@@ -39,6 +39,13 @@
           </div>
 
           <div class="form-group mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control bg-transparent text-white border-light rounded" id="email" placeholder="e.g. you@example.com" required>
+            <small class="text-secondary">We'll never share your email with anyone else.</small>
+          </div>
+
+
+          <div class="form-group mb-3">
             <label for="phone" class="form-label">Phone Number</label>
             <input type="tel" class="form-control bg-transparent text-white border-light rounded" id="phone" placeholder="e.g. 66395100" required>
             <small class="text-secondary">We'll never share your number with anyone else.</small>
@@ -64,7 +71,8 @@
         <ul class="list-unstyled mb-4">
             <li><br></li>
             <li>gym subscription</li>
-            <li>workout plans</li>
+            <li>Facilities</li>
+            <li>Products</li>
             <li><br></li>
         </ul>
     <a href="#introduction" class="btn fw-bold disabled plancards">Join Now</a>
@@ -80,7 +88,8 @@
             <p class="display-6 fw-bold mb-3"><span class="price">50 BD</span><small class="fs-6">/month</small></p>
             <ul class="list-unstyled mb-4">
               <li>gym subscription</li>
-              <li>workout plans</li>
+              <li>Facilities</li>
+              <li>Products</li>
               <li>Nutrition & Lifestyle</li>
             </ul>
             <a href="#introduction" class="btn btn-warning text-dark fw-semibold disabled plancards">Join Now</a>
@@ -95,7 +104,8 @@
             <p class="display-6 fw-bold mb-3"><span class="price">70 BD</span><small class="fs-6">/month</small></p>
             <ul class="list-unstyled mb-4">
               <li>gym subscription</li>
-              <li>workout plans</li>
+              <li>Facilities</li>
+              <li>Products</li>
               <li>Nutrition & Lifestyle</li>
               <li>Sauna access</li>
             </ul>
@@ -122,9 +132,6 @@
       <div class="position-relative">
       <img src="/img/Iso protein 1.jpg" class="card-img-top img-cover" alt="Iso protein">
       <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2"> 30 BD</span>
-      <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-      <i class="bi bi-cart3"></i>
-      </button>
     </div>
 
   <div class="card-body">
@@ -146,9 +153,6 @@
     <div class="position-relative">
       <img src="/img/Whey Protein 2.jpg" class="card-img-top img-cover" alt="Whey Protein">
       <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">27 BD</span>
-      <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-      <i class="bi bi-cart3"></i>
-      </button>
     </div>
 
   <div class="card-body">
@@ -168,10 +172,6 @@
     <div class="position-relative">
       <img src="/img/Cookie Dough 3.jpg" class="card-img-top img-cover" alt="Cookie Dough">
       <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">24 BD</span>
-      <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-      <i class="bi bi-cart3"></i>
-      </button>
-
   </div>
     <div class="card-body">
       <small class="d-block mb-1">Addonis</small>
@@ -190,9 +190,6 @@
           <div class="position-relative">
             <img src="/img/Beef Xp 4.webp" class="card-img-top img-cover" alt="Beef Nutrition">
             <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">20 BD</span>
-            <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-              <i class="bi bi-cart3"></i>
-            </button>
           </div>
 
           <div class="card-body">
@@ -216,12 +213,31 @@
   <div class="container text-center">
     <h2 class="mb-4">Client <span>Reviews</span></h2>
 
-    <div class="row justify-content-center g-4">
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card mx-auto shadow-sm border-light planbg" style="max-width:220px;">
+    <!-- 2 per row on small/medium, 4 per row on large+ -->
+    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-3 g-md-4 justify-content-center">
+
+      <div class="col">
+        <div class="card h-100 shadow-sm border-light planbg">
           <img src="/img/Review - 1.jpg" class="card-img-top p-2 review-img rounded-circle mx-auto mt-3" alt="Mohammed">
           <div class="card-body">
             <h5 class="mb-1">Mohammed Zuhair</h5>
+            <div class="rating mb-2">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="card-text small">Would go for it again</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm border-light planbg">
+          <img src="/img/hussain.jpg" class="card-img-top p-2 review-img rounded-circle mx-auto mt-3" alt="Mohammed">
+          <div class="card-body">
+            <h5 class="mb-1">Hussain Alkhnaizi</h5>
             <div class="rating mb-2">
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
@@ -234,8 +250,8 @@
         </div>
       </div>
 
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card mx-auto shadow-sm border-light planbg" style="max-width:220px;">
+      <div class="col">
+        <div class="card h-100 shadow-sm border-light planbg">
           <img src="/img/Review - 2.jpg" class="card-img-top p-2 review-img rounded-circle mx-auto mt-3" alt="Sayed Ali">
           <div class="card-body">
             <h5 class="mb-1">Sayed Ali</h5>
@@ -251,8 +267,8 @@
         </div>
       </div>
 
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card mx-auto border-light planbg" style="max-width:220px;">
+      <div class="col">
+        <div class="card h-100 shadow-sm border-light planbg">
           <img src="/img/Review - 3.jpg" class="card-img-top review-img p-2 rounded-circle mx-auto mt-3" alt="Waheed">
           <div class="card-body">
             <h5 class="mb-1">Waheed</h5>
@@ -267,6 +283,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
