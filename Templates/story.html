@@ -1,29 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/home.css">
-    <title>Athletica GYM</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Athletica GYM</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/home.css">
 </head>
-<div id="summary" class="my-5">
+<body>
+<nav id="navbar-placeholder"></nav>
+<section id="summary" class="py-4 mt-5">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-10 col-xxl-8">
-        <H1 class="fw-bold text-center mb-3">Athletica Gym — Project Summary</H1>
-        <p class="text-secondary text-center mb-0">
-          A responsive multi-page site with a branded header and navbar linking to
-          Home, Products, Facilities, Nutrition, Making of, and Our Story. The first
-          screen prompts login (name + phone), and logging out redirects to register.
-          Membership plans include Basic, Pro, and Premium. Home highlights sample
-          products with a “More” button to the full Products page. There are member
-          reviews for social proof, and the footer includes our social media plus a
-          right-aligned email signup form.
+    <div class="row align-items-center g-2">
+      <!-- Left: text -->
+      <div class="col-12 col-lg-7">
+        <h2 class="fw-bold mb-3">Project Summary</h2>
+        <p class="text-secondary mb-0">
+        We created a user-friendly, fully-responsive multiple-page website for Athletica
+        Gym leveraging the power of Bootstrap 5. The branded header has a sticker navbar
+        with links to Home, Products, Facilities, Nutrition, Making of and Our Story.
+        For the first-run login, the user enters their name and phone number, and their
+        login state is saved in localStorage. When a user log offs the program, they
+        experience a minimal registration flow. The Home area included a selected
+        product list that shows product badges, product pricing, and a prominent
+        More button that shows the rest of the product list. The Facilities section
+        included a grid view of the facility's equipment, which would adapt from
+        mobile to desktop, and the Nutrition shown a clean layout for the calculator
+        and related recommendations based on activity level. We defined three membership
+        plans, (Basic, Pro, and Premium) which resulted in premium features being gated
+        for those premium members. We added member reviews to build consumer trust and
+        social proof. Each page also offers a compact footer composed of social icons on
+        the left and an email signup form on the far right. Overall, accessibility, multi-device
+        display capabilities, consistent spacing and load time, fixed common layout bugs,
+        and clean display across devices were considered.
         </p>
+      </div>
+
+      <!-- Right: image -->
+      <div class="col-sm-12 col-md-10 col-lg-5 mt-3">
+        <div class="ratio ratio-4x3 bg-body-tertiary border rounded-4 shadow-sm d-flex align-items-center justify-content-center">
+          <div class="text-center">
+            <i class="bi bi-image fs-1 d-block"></i>
+            <span class="text-secondary">Add your photo here</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+<section id="challenges" class="py-5 my-4">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Left: Image -->
+      
+      <section id="challenges" class="py-5 my-4">
+  <div class="container">
+    <div class="row align-items-center g-5 justify-content-between">
+
+      <!-- Left: 4 Photos (2x2) -->
+      <div class="col-12 col-lg-5">
+        <div class="row row-cols-2 g-3">
+          <div class="col">
+            <div class="ratio ratio-4x3 bg-body-tertiary border rounded-4 shadow-sm d-flex align-items-center justify-content-center">
+              <!-- <img src="/images/challenge-1.jpg" alt="Project photo 1" class="w-100 h-100 img-fluid object-fit-cover"> -->
+              <div class="text-center">
+                <i class="bi bi-image fs-1 d-block"></i>
+                <span class="text-secondary">Photo 1</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="ratio ratio-4x3 bg-body-tertiary border rounded-4 shadow-sm d-flex align-items-center justify-content-center">
+              <!-- <img src="/images/challenge-2.jpg" alt="Project photo 2" class="w-100 h-100 img-fluid object-fit-cover"> -->
+              <div class="text-center">
+                <i class="bi bi-image fs-1 d-block"></i>
+                <span class="text-secondary">Photo 2</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="ratio ratio-4x3 bg-body-tertiary border rounded-4 shadow-sm d-flex align-items-center justify-content-center">
+              <!-- <img src="/images/challenge-3.jpg" alt="Project photo 3" class="w-100 h-100 img-fluid object-fit-cover"> -->
+              <div class="text-center">
+                <i class="bi bi-image fs-1 d-block"></i>
+                <span class="text-secondary">Photo 3</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="ratio ratio-4x3 bg-body-tertiary border rounded-4 shadow-sm d-flex align-items-center justify-content-center">
+              <!-- <img src="/images/challenge-4.jpg" alt="Project photo 4" class="w-100 h-100 img-fluid object-fit-cover"> -->
+              <div class="text-center">
+                <i class="bi bi-image fs-1 d-block"></i>
+                <span class="text-secondary">Photo 4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="small text-body-secondary mt-3 mb-0">Two-by-two responsive photo grid on the left.</p>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-12 col-lg-7">
+        <h1 class="fw-bold mb-2">Project Challenges &amp; Resolutions</h1>
+        <p class="text-body mb-4">
+          Below are the key issues we faced during development and the concrete steps we took to resolve them.
+          Our aim was to keep the notes concise and easy to scan while documenting fixes we can reuse across
+          the project. By standardizing how we serve assets, optimize images, structure responsive layouts,
+          and approach debugging, we improved reliability and reduced time-to-fix. These decisions also give
+          new contributors a clear starting point, explain why certain utilities and patterns were chosen,
+          and help prevent the same problems from resurfacing as the codebase grows.
+        </p>
+
+        <h2 class="h5 fw-semibold mb-1">Running from Local File Paths</h2>
+        <p class="text-body">
+          Opening the site via <code>file://</code> produced broken relative URLs, blocked fonts, and inconsistent
+          image rendering. We now run a local HTTP server (e.g., Live Server/Vite preview), unify relative paths,
+          and include a small protocol check that warns and redirects if the app isn’t served over http/https.
+          This eliminated blurry text, ensured CORS-safe requests, and aligned dev and production environments.
+        </p>
+
+        <h2 class="h5 fw-semibold mb-1">Image Clarity &amp; Scaling</h2>
+        <p class="text-body">
+          Some assets were low-resolution or stretched beyond their native size. We replaced weak images with
+          higher-resolution WebP/AVIF where possible, enforced stable aspect ratios with Bootstrap’s
+          <code>ratio-*</code> utilities (e.g., <code>ratio-4x3</code>, <code>ratio-1x1</code>), and applied
+          <code>img-fluid</code> to prevent overflow. When needed, we used <code>object-fit: cover</code> to avoid
+          distortion and added lazy loading to improve performance on mobile networks.
+        </p>
+
+        <h2 class="h5 fw-semibold mb-1">Responsiveness Across Devices</h2>
+        <p class="text-body">
+          Early layouts didn’t adapt cleanly at every breakpoint. We refactored with the
+          <code>container</code>/<code>row</code>/<code>col-*</code> grid, used <code>row-cols-*</code> to control
+          gallery density, and balanced spacing with utilities like <code>g-*</code> and <code>py-*</code>. We verified
+          behavior across multiple viewport widths and devices, checking keyboard navigation and zoom to ensure a
+          usable, accessible experience.
+        </p>
+
+        <h2 class="h5 fw-semibold mb-1">Debugging &amp; Stability</h2>
+        <p class="text-body mb-0">
+          We centralized scripts, added defensive null checks around DOM selectors, and instrumented critical flows
+          with clear console messages. Using DevTools for breakpoints, network throttling, performance profiling, and
+          Lighthouse audits reduced flaky behavior in the navbar toggler and login/register flow. After each fix we ran
+          quick regression checks to confirm no side effects, which helped keep build quality high as features evolved.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      <!-- Left: Text -->
+      <div class="col-12 col-lg-7 pe-lg-4">
+        <h1 class="fw-bold mb-4">Team Skills & Learning Outcomes</h1>
+
+        <h2 class="h4 fw-semibold mb-2">Front-end development</h2>
+        <p class="text-body mb-3">
+          We moved beyond “it works” to “it’s accessible, maintainable, and consistent.” In HTML, we used semantic structure with clear headings, landmarks, and alt text to improve accessibility and SEO. In CSS, we kept selectors shallow, avoided specificity fights, and leaned on Bootstrap utilities for spacing, layout, and typography so components stay unified. Media stayed crisp using responsive images (<code>img-fluid</code>) and stable aspect ratios via Bootstrap’s <code>ratio</code> helpers. In JavaScript, we preferred smaller, pure functions, added null checks before DOM operations, and standardized error handling and formatting—making the codebase easier to review and extend.
+        </p>
+
+        <h2 class="h4 fw-semibold mb-2">Collaboration & communication</h2>
+        <p class="text-body mb-3">
+          We set clear roles, held short daily stand-ups, and tracked work on a simple Kanban (Backlog → Doing → Review → Done). Feature branches and pull requests formed a reliable review loop with checklists covering functionality, UX, accessibility, and responsiveness. Descriptive commit messages and pair programming on tricky areas (navbar logic, auth flow) reduced defects and spread knowledge. Async comments kept momentum high while documenting decisions.
+        </p>
+
+        <h2 class="h4 fw-semibold mb-2">Responsive design with Bootstrap</h2>
+        <p class="text-body mb-3">
+          We built mobile-first and layered breakpoints for smooth scaling. Image grids adapt using <code>row-cols-3</code> on small screens and <code>row-cols-lg-5</code> on large, with <code>g-3</code>/<code>g-lg-4</code> for balanced spacing. Layout order stays intuitive (text left, media right) using grid columns and <code>order-*</code> utilities. We stabilized aspect ratios with <code>ratio-1x1</code> and <code>ratio-4x3</code>, optimized assets (WebP/AVIF), and used lazy loading to improve performance.
+        </p>
+
+        <h2 class="h4 fw-semibold mb-2">Problem-solving</h2>
+        <p class="text-body mb-0">
+          Our debug loop: reproduce → isolate → hypothesize → test → fix → regression check. DevTools were central—DOM inspection, network throttling, performance profiling, Lighthouse audits, and the Coverage tab for unused CSS/JS. We used console tracing and breakpoints to follow event flows, and for cross-feature issues we built minimal reproductions. Small “unit-like” checks and targeted console assertions helped prevent repeat bugs as the project grew.
+        </p>
+      </div>
+
+      <!-- Right: Photo -->
+      <div class="col-12 col-lg-5 ms-lg-auto">
+        <div class="ratio ratio-4x3 bg-body-tertiary border rounded-4 shadow-sm overflow-hidden">
+          <!-- Replace with your real image and remove the placeholder block -->
+          <!-- <img src="/images/learning-outcomes.jpg" alt="Project preview" class="w-100 h-100 object-fit-cover img-fluid"> -->
+          <div class="d-flex h-100 w-100 align-items-center justify-content-center">
+            <div class="text-center">
+              <i class="bi bi-image fs-1 d-block"></i>
+              <span class="text-secondary">Add your photo here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</section>
+
+<script src="../js/checkProtocol.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="/js/navbar.js"></script>
+<script src="/js/plan.js"></script>
+
+</body>
+</html>
