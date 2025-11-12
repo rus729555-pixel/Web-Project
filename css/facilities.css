@@ -1,0 +1,20 @@
+    .facility-card{
+      background: var(--bg-color);
+      border: 1px solid var(--bs-border-color);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .facility-card:hover{
+      transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 1.6rem var(--main-color);
+      border-color: var(--main-color)
+    }
+    
+    .facility-icon{ font-size: 1.35rem; color: var(--alpha-accent); }
+    .facility-img{
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      background: #0b0b0c;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      width: 100%;
+    }
+  .text-dim{ color: var(--alpha-dim); }

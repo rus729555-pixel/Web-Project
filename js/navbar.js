@@ -19,12 +19,12 @@ function controlNavbar() {
 
   const home = document.querySelector('a[href="/Templates/index.html"]')?.closest("li");
   const products = document.querySelector('a[href="/Templates/products.html"]')?.closest("li");
-  const workout = document.querySelector('a[href="/Templates/workout.html"]')?.closest("li");
+  const facilities = document.querySelector('a[href="/Templates/facilities.html"]')?.closest("li");
   const nutrition = document.querySelector('a[href="/Templates/Nutrition.html"]')?.closest("li");
   const makingof = document.querySelector('a[href="/Templates/makingof.html"]')?.closest("li");
   const story = document.querySelector('a[href="/Templates/story.html"]')?.closest("li");
 
-  [home, products, workout, nutrition, makingof, story].forEach(li => li?.classList.add("d-none"));
+  [home, products, facilities, nutrition, makingof, story].forEach(li => li?.classList.add("d-none"));
 
   home?.classList.remove("d-none");
   makingof?.classList.remove("d-none");
@@ -33,7 +33,7 @@ function controlNavbar() {
   if (!isLoggedIn) return;
 
   products?.classList.remove("d-none");
-  workout?.classList.remove("d-none");
+  facilities?.classList.remove("d-none");
   nutrition?.classList.remove("d-none");
 
   if (savedUser.plan?.toLowerCase() === "basic" || !savedUser.plan) {

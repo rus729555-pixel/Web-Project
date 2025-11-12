@@ -48,8 +48,16 @@ span {
 
 /* FOOTER + NAVBAR */
 .footer{
-    background-color: black !important;
+  --mix: 8%;
+  background: linear-gradient(
+    135deg,
+    #000 0%,
+    #000 calc(50% - var(--mix)),
+    #67056c calc(50% + var(--mix)),
+    #67056c 100%
+  );
 }
+
 .navbar{
     background-color: var(--plans-color)!important;
 }
@@ -84,4 +92,8 @@ span {
 
 select {
   cursor: pointer;
+}
+
+.iconcolor{
+    color: var(--text-color);
 }
