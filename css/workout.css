@@ -1,0 +1,181 @@
+:root {
+--bg-color:#000;
+--snd-bg-color:#111;
+--text-color:#fff;
+--main-color:#b845ff;
+--plans-color: #070707;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color:var(--bg-color);
+  color: #fff;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #0b0b0b;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.logo h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.logo h1 span {
+  color: #a64dff; /* purple “Alpha” */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #a64dff;
+}
+
+/* ------------------------------
+   WORKOUTS SECTION
+------------------------------ */
+#workouts {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #111;
+}
+
+#workouts h2 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 50px;
+  position: relative;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#workouts h2::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background-color: #a64dff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid Layout for 8 Workouts */
+.workouts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 0 60px;
+}
+
+/* Workout Cards */
+.workout-card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(166, 77, 255, 0.4);
+}
+
+.workout-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.workout-info {
+  padding: 25px 20px;
+  text-align: left;
+}
+
+.workout-info h3 {
+  font-size: 1.3rem;
+  color: #a64dff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.workout-info p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+@media (max-width: 1024px) {
+  .workouts-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 30px;
+  }
+
+  #workouts h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .workouts-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 15px 30px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+}
