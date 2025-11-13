@@ -25,7 +25,6 @@ submitBTN.addEventListener("click", (e) => {
     msg += "First and Last name must have at least 3 characters.<br>";
   }
 
-  // very simple email check
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     msg += "Please enter a valid email address.<br>";
@@ -40,7 +39,6 @@ submitBTN.addEventListener("click", (e) => {
     error.classList.remove("d-none");
     error.style.color = "red";
   } else {
-    // 👇 save email as well
     localStorage.setItem(
       "alphaUser",
       JSON.stringify({ firstName, lastName, email, phone })
