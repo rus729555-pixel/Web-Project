@@ -52,12 +52,10 @@
       <div class="col-12 col-lg-6 col-xl-7 order-lg-2">
         <h1 class="fw-bold mb-2"><span>Project Challenges &amp; Resolutions</span></h1>
         <p class="mb-4">
-          Below are the key issues we faced during development and the concrete steps we took to resolve them.
-          Our aim was to keep the notes concise and easy to scan while documenting fixes we can reuse across
-          the project. By standardizing how we serve assets, optimize images, structure responsive layouts,
-          and approach debugging, we improved reliability and reduced time-to-fix. These decisions also give
-          new contributors a clear starting point, explain why certain utilities and patterns were chosen,
-          and help prevent the same problems from resurfacing as the codebase grows.
+        Here are the main problems we faced during the project and the solutions we found. 
+        We aimed to keep the notes brief and easy to read while also documenting the fixes that could be reused throughout the project. 
+        By standardizing asset delivery, optimizing images, creating responsive layouts, and debugging, we improved reliability and reduced time to fix.
+        appropriate references for their configurations and your development cycle/behavior matched your published site.
         </p>
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Running from Local File Paths</h2>
@@ -70,19 +68,17 @@
         <h2 class="h5 fw-semibold mb-1 text-warning">Image Clarity &amp; Scaling</h2>
         <p>
           Some assets were low-resolution or stretched beyond their native size. We replaced weak images with
-          higher-resolution WebP/AVIF where possible, enforced stable aspect ratios with Bootstrap's
-          ratio-* utilities (e.g., ratio-4x3, ratio-1x1), and applied
-          img-fluid to prevent overflow. When needed, we used object-fit: cover to avoid
-          distortion and added lazy loading to improve performance on mobile networks.
+          higher-resolution WebP/AVIF where possible, enforced stable aspect ratios with Bootstrap's ratio-* utilities. For example, ratio-4x3 and ratio-1x1. Also, we applied img-fluid to prevent overflow. 
+          When needed, we used object-fit: cover to avoid distortion; however, we didnt add lazy loading as the images were not much and adding it will be useless.
         </p>
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Responsiveness Across Devices</h2>
-        <p >
-          Early layouts didn't adapt cleanly at every breakpoint. 
-          We were relying on manual lg, md, and sm settings, which caused sections to shift or scale incorrectly on different screens.
-          We refactored using the container/row/col-* grid, applied row-cols-* to control gallery density, and balanced spacing with utilities like g-* and py-*. 
-          We tested across multiple viewport widths, checking keyboard navigation and zoom, to ensure a stable and accessible experience.
-        </p>
+        <p>
+        In the beginning, our layout was a bit messy. It would look normal on one screen, then when the window was shrunk, everything started moving in the wrong direction. 
+        We were using lg/md/sm, and mixing it with the grid, but still some sections stretched weird or ended up in random spots. 
+        We fixed it by actually using both the right way. First, we used the basic container/row/col setup, and then row-cols-* to control how many divs show in a row, and that solved the issue. 
+        We also fixed the spacing with simple g-* and py-* instead of using extra CSS. After that, we just kept testing on different screen sizes, zooming in and out, even checking keyboard tabbing, just to make sure the whole site worked properly.        
+      </p>
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Debugging &amp; Stability</h2>
         <p class="mb-0">
@@ -136,25 +132,35 @@
 
         <h2 class="h4 fw-semibold mb-2">Front-end development</h2>
         <p class="text-body mb-3">
-          We moved beyond “it works” to “it’s accessible, maintainable, and consistent.” In HTML, we used semantic structure with clear headings, landmarks, and alt text to improve accessibility and SEO. In CSS, we kept selectors shallow, avoided specificity fights, and leaned on Bootstrap utilities for spacing, layout, and typography so components stay unified. Media stayed crisp using responsive images (<code>img-fluid</code>) and stable aspect ratios via Bootstrap's <code>ratio</code> helpers. In JavaScript, we preferred smaller, pure functions, added null checks before DOM operations, and standardized error handling and formatting making the codebase easier to review and extend.
+          We were no longer working for "it works," rather we worked on making something accessible to all, easy to maintain, and consistent throughout. 
+          By using HTML, we made the structure of the pages crystal clear: semantic tags, headers, and meaningful images helped a user understand the sections in one go.
+          Most of the work in CSS was required to do with styling and color, as Bootstrap handled much of the responsiveness. 
+          We set up the interface on a very simple, unified color scheme-purple, black, white, and yellow-which was applied uniformly in buttons, backgrounds, and highlights to provide users with a clean, recognizable UI.
+          Mainly, the work done in JavaScript is focused on the logic of a login and controlling the navbar: user authentication and access to certain pages/plans, while simultaneously blocking access for such features for unregistered users. Its aim is to ensure the site acted 
+          appropriately for each level of access, while keeping the code readable.
         </p>
 
         <h2 class="h4 fw-semibold mb-2">Collaboration & communication</h2>
         <p class="text-body mb-3">
-        Our communication was straightforward and effective. 
-        We divided the work by setting clear roles: each member took ownership of a specific page, one focused on the JavaScript logic, another handled design improvements, and another reviewed the project and removed unnecessary code. 
-        We kept each other updated through short check-ins and shared progress as tasks were completed. Our final meeting was the longest, lasting almost five hours, where we refined the project together and made sure everything was consistent before submission. 
-        This approach helped us stay organized, avoid duplicated work, and maintain a unified style across all pages.
+        We could communicate with each other very straightforwardly, and it went very smoothly. 
+        We made sure the responsibilities were assigned quite clearly: one person took a page, another took care of the JavaScript, log in, navbar, access control, while one more worked on the visuals and cleaned up some of the code, removing things we did not need. 
+        We would regularly update each other on the assigned tasks with some short and quick check-ins to let each other know when we moved things to the "done" from the "doing" section.
+        Our last session dragged for almost five hours, which was the longest we have worked at one table on everything and eliminated inconsistencies together. 
+        It helped us limit the amount of time we have probably worked in vain and also kept the final output clean and whole.
         </p>
 
         <h2 class="h4 fw-semibold mb-2">Responsive design with Bootstrap</h2>
         <p class="text-body mb-3">
-          We built mobile-first and layered breakpoints for smooth scaling. Image grids adapt using <code>row-cols-3</code> on small screens and <code>row-cols-lg-5</code> on large, with <code>g-3</code>/<code>g-lg-4</code> for balanced spacing. Layout order stays intuitive (text left, media right) using grid columns and <code>order-*</code> utilities. We stabilized aspect ratios with <code>ratio-1x1</code> and <code>ratio-4x3</code>, optimized assets (WebP/AVIF), and used lazy loading to improve performance.
+          We used a mobile-first approach to allow responsive design and promote clean visuals with our final product. Most of the layout was done with Bootstrap's grid system. 
+          The grids for images scale nicely with the usage of the row-cols-*, and we applied img-fluid consistently so the images don't stretch in the site.
+          The layouts are still logical - text on the left, images on the right - and the breakpoints make sure the reshaping is done right on phone, tablet, and desktop.
         </p>
 
         <h2 class="h4 fw-semibold mb-2">Problem-solving</h2>
         <p class="text-body mb-0">
-          When something broke whether it was file:// issues, stretched images, weird layouts, or the login form we reproduced the bug, changed one thing, and tested again. We mainly used DevTools (console errors, element inspector, and responsive view) plus simple console.log() checks to see where the logic failed. After each fix, we quickly re-tested the main pages and the login/register flow to make sure nothing else was accidentally broken.
+          Whenever there were issues with file://, stretched images, elements moving around, or login not working - we would recreate the bug, 
+          change one thing and test it again. DevTools was our main tool - looking at console errors, inspecting elements, and using responsive to see visual glitches.
+          After every bug was fixed we would test the login/register flow and main pages to confirm nothing else was broken.
         </p>
       </div>
 
