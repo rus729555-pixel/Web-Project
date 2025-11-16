@@ -1,3 +1,41 @@
+:root {
+    --bg-color:#000;
+    --snd-bg-color:#111;
+    --text-color:#fff;
+    --main-color:#b845ff;
+    --plans-color: #070707;
+}
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+.btn {
+    border: none;
+    color: var(--text-color);
+    box-shadow: none;
+    transition: 0.5s ease;
+}
+
+.btn:hover{
+    background-color: var(--main-color) !important;
+    border-radius: 15px;
+    transition: 12 ease all;
+    color: var(--text-color) !important;
+    box-shadow: 0 0 1.6rem var(--main-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+}
+
+span {
+    color: var(--main-color);
+}
+
 
 #banner {
     display: flex;
@@ -5,27 +43,80 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url(/img/b2.jpg);   
+    background: url(/img/—Pngtree—single\ dumbbell\ isolated\ on\ dark_19186486.jpg);   
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     background-size: cover;
     background-position: center;
 }
 
-#banner h4 {
-    color: var(--text-color);
-    font-size: 40px;
+
+
+
+
+/*products*/
+
+.title-header {
+    border-bottom: var(--main-color) solid 5px;
 }
 
-button.normal {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 15px 30px;
-    color: #000;
-    background-color: var(--text-color);
-    border-radius: 4px;
+.title{
+    color: var(--main-color);
+}
+
+
+
+.btn-primary {
+    background-color: var(--main-color);
+}
+
+.star {
+    color: gold;
+}
+
+.star:hover {
+    transition: all ease 1s;
     cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.2s;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    height: 300px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+    transition: ease all 1s;
+}
+
+.myicon {
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+.card-body {
+  background-color: var(--plans-color); 
+  color: var(--text-color);
+}
+
+
+.product-card:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 .5rem 1rem var(--main-color); 
+  }
+
+
+.card {
+  background-color: transparent;
+  border: none;
+}
+
+  
+.services {
+    margin-top: 150px !important;
 }

@@ -8,212 +8,316 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/product.css">
+
+
     <title>Athletica GYM</title>
 </head>
 
 <body>
-  <div id="navbar-placeholder"></div>
-  <section id="banner" class="mt-5 bg-dark text-center text-white">
+
+<div id="navbar-placeholder"></div>
+
+ <section id="banner" class="mt-5 bg-dark text-white">
   <div class="container">
-    <h4 class="fw-semibold">Your Fitness Journey Starts Here</h4>
-    <h2 class="fw-bold"> Up to <span class="text-warning">50% off</span> - Gym Supplements & Accessories
-    </h2>
-    <button class="btn btn-warning text-dark fw-semibold mt-3">Explore More</button>
+
+    <div class="row align-items-center" style="min-height: 300px;">
+      <div class="col-md-8 text-start">
+        <h2 class="fw-bold fs-1">Your Fitness Journey Starts Here</h2>
+        <h2 class="fw-bold fs-2">Up to <span class="text-warning">50% off</span> - Gym Supplements & Accessories</h2>
+      </div>
+    </div>
   </div>
 </section>
 
 
-<section id="product" class="py-5">
-  <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="fw-bold text-white">Our <span>Products</span></h2>
-        <p class="text-white">Your Gym Products <span class="text-white" id="login-text"><span class="text-warning"></span></p>
-  </div>
+<section id="products" class="text-center mt-5">
 
-<div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center text-center">
-  
-      <div class="col">
-        <div class="card product-card">
-          <div class="position-relative">
-          <img src="/img/Iso protein 1.jpg" class="card-img-top img-cover" alt="Iso-protein">
-          <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2"> 30 BD</span>
-          <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-          <i class="bi bi-cart3"></i>
-          </button>
-        </div>
+    <div class="d-flex justify-content-center">
+      <h2 class="title-header pb-2">Our <span>Products</span></h2>
+    </div>
 
-      <div class="card-body">
-        <small class="d-block mb-1">Adonis</small>
-          <h6 class="card-title mb-2">Iso Protein</h6>
-            <div class="text-warning" aria-label="4 stars">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
+    <div class="d-flex justify-content-center mt-4 mb-5 button-group filter-button-group">
+      <button class="btn btn-primary m-2" data-filter="*">All</button>
+      <button class="btn btn-primary m-2" data-filter=".mostsales">Most Sales</button>
+      <button class="btn btn-primary m-2" data-filter=".news">News</button>
+      <button class="btn btn-primary m-2" data-filter=".discounts">Discounts</button>
+    </div>
+
+    <div class="container">
+      <div class="collection-list row justify-content-center">
+
+        <div class="col-6 col-md-4 col-lg-3 news">
+          <div class="product-card card m-2 p-0 text-center" style="width: 100%;">
+            <img src="/img/Iso protein 1.jpg" class="card-img-top" alt="Iso-protein" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+            <div class="card-body ">
+              <div class="star mt-3 mb-3">
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-half star"></i>
+              </div>
+              <p class="card-title title fs-5 fw-bold">Iso Protein</p>
+              <p class="card-text fw-bold">30 BD</p>
             </div>
           </div>
         </div>
-    </div>
 
 
-    <div class="col">
-      <div class="card product-card">
-        <div class="position-relative">
-          <img src="/img/Whey Protein 2.jpg" class="card-img-top img-cover" alt="cookie Dough">
-          <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">27 BD</span>
-          <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-          <i class="bi bi-cart3"></i>
-          </button>
-        </div>
-
-      <div class="card-body">
-        <small class="d-block mb-1">Optimum Nutrition</small>
-        <h6 class="card-title mb-2">Whey Protein</h6>
-          <div class="text-warning" aria-label="4 stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+        <div class="col-6 col-md-4 col-lg-3 news">
+          <div class="product-card card m-2 p-0 text-center" style="width: 100%;">
+            <img src="/img/Whey Protein 2.jpg" class="card-img-top" alt="Whey Protein" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+            <div class="card-body">
+              <div class="star mt-3 mb-3">
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-half star"></i>
+              </div>
+              <p class="card-title title fs-5 fw-bold">Whey Protein</p>
+              <p class="card-text fw-bold">27 BD</p>
+            </div>
           </div>
         </div>
+
+
+
+        <div class="col-6 col-md-4 col-lg-3 news">
+          <div class="product-card card m-2 p-0 text-center" style="width: 100%;">
+            <img src="/img/Cookie Dough 3.jpg" class="card-img-top" alt="Cookie Dough" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+            <div class="card-body">
+              <div class="star mt-3 mb-3">
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-half star"></i>
+              </div>
+              <p class="card-title title fs-5 fw-bold">Cookie Dough</p>
+              <p class="card-text fw-bold">24 BD</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-6 col-md-4 col-lg-3 discounts">
+          <div class="product-card card m-2 p-0 text-center" style="width: 100%;">
+            <img src="/img/Beef Xp 4.webp" class="card-img-top" alt="Beef Xp" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+            <div class="card-body">
+              <div class="star mt-3 mb-3">
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-half star"></i>
+              </div>
+              <p class="card-title title fs-5 fw-bold">Beef Xp</p>
+              <p class="card-text fw-bold">20 BD</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-6 col-md-4 col-lg-3 discounts">
+          <div class="product-card card m-2 p-0 text-center" style="width: 100%;">
+            <img src="/img/Cookie Dough 5.jpg" class="card-img-top" alt="Cookie Dough" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+            <div class="card-body">
+              <div class="star mt-3 mb-3">
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-half star"></i>
+              </div>
+              <p class="card-title title fs-5 fw-bold">Cookie Dough</p>
+              <p class="card-text fw-bold">17 BD</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-6 col-md-4 col-lg-3 mostsales">
+          <div class="product-card card m-2 p-0 text-center" style="width: 100%;">
+            <img src="/img/Creatine 6.jpg" class="card-img-top" alt="Creatine" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+            <div class="card-body">
+              <div class="star mt-3 mb-3">
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-half star"></i>
+              </div>
+              <p class="card-title title fs-5 fw-bold">Creatine</p>
+              <p class="card-text fw-bold">10 BD</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-6 col-md-4 col-lg-3 mostsales">
+          <div class="product-card card m-2 p-0 text-center" style="width: 100%;">
+            <img src="/img/Gloves 7.jpg" class="card-img-top" alt="..." data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+            <div class="card-body">
+              <div class="star mt-3 mb-3">
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-half star"></i>
+              </div>
+              <p class="card-title title fs-5 fw-bold">Shaker</p>
+              <p class="card-text fw-bold">6 BD</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-6 col-md-4 col-lg-3 mostsales">
+          <div class="product-card card m-2 p-0 text-center" style="width: 100%;">
+            <img src="/img/Shaker 8.jpg" class="card-img-top" alt="..." data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+            <div class="card-body">
+              <div class="star mt-3 mb-3">
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-half star"></i>
+              </div>
+              <p class="card-title title fs-5 fw-bold">Shaker</p>
+              <p class="card-text fw-bold">4 BD</p>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
+  </section>
 
 
-    <div class="col">
-      <div class="card product-card">
-        <div class="position-relative">
-          <img src="/img/Cookie Dough 3.jpg" class="card-img-top img-cover" alt="Adidas Cartoon Astronaut T-Shirt">
-          <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">24 BD</span>
-          <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-          <i class="bi bi-cart3"></i>
-          </button>
 
-      </div>
-        <div class="card-body">
-          <small class="d-block mb-1">Addonis</small>
-            <h6 class="card-title mb-2">Cookie Dough</h6>
-            <div class="text-warning" aria-label="4 stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            <i class="bi bi-star"></i>
+<!-- modal -->
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"> Products Details</h1>
+        </div>
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col">
+
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/img/Cookie Dough 2.jpg" class="d-block w-100 " style="height: 280px !important;"
+                      alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/logo.png" class="d-block w-100 " style="height: 280px !important;" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/checked.png" class="d-block w-100 " style="height: 280px !important;" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="prev">
+                  <i class="bi bi-chevron-double-left myicon"></i>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="next">
+                  <i class="bi bi-chevron-double-right myicon"></i>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="pt-5">
+                <h4>Cookie Dough</h4>
+                <p>new coookie do with so tasye kpodjko</p>
+                <p>24 BD
+                <p>
+                  <button class="btn btn-primary">Add to Cart <i class="bi bi-cart3"></i></button>
+              </div>
+
+
+            </div>
           </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <div class="col">
-      <div class="card product-card">
-      <div class="position-relative">
-        <img src="/img/Beef Xp 4.webp" class="card-img-top img-cover" alt="Adidas Cartoon Astronaut T-Shirt">
-        <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">20 BD</span>
-        <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-        <i class="bi bi-cart3"></i>
-        </button>
+
+  <section id="services">
+    <div class="container mt-5">
+      <div class="d-flex justify-content-center">
+        <h2 class="d-inline-block title-header p-2"> Our <span>Service</span></h2>
       </div>
-      <div class="card-body">
-        <small class="d-block mb-1">Applied Nutrition</small>
-          <h6 class="card-title mb-2">Beef Xp</h6>
-          <div class="text-warning" aria-label="4 stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-          </div>
+
+      <div class="row text-center">
+        <div class="col-md-5 col-sm-12">
+          <iframe src="https://lottie.host/embed/e71af7dd-9559-400d-95b3-6ae511afddf2/ZMKmM8kwWc.lottie" width="100%"
+            height="300"></iframe>
+
+        </div>
+        <div class="col-md-7 pt-5 col-sm-12">
+          <h4 class="title mt-5">Shop Online</h4>
+          <p>eifkhnefwikhbefhiujfgbebuijfewguijgvi</p>
         </div>
       </div>
-    </div>
 
 
-    <div class="col">
-      <div class="card product-card">
-      <div class="position-relative">
-        <img src="/img/Cookie Dough 5.jpg" class="card-img-top img-cover" alt="Adidas Cartoon Astronaut T-Shirt">
-        <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">17 BD</span>
-        <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-        <i class="bi bi-cart3"></i>
-        </button>
-      </div>
-      <div class="card-body">
-        <small class="d-block mb-1">Applied Nutrition</small>
-          <h6 class="card-title mb-2">Cookie Dough</h6>
-          <div class="text-warning" aria-label="4 stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-          </div>
+      <div class="row text-center" dir="rtl">
+        <div class="col-md-5 col-sm-12"> <iframe
+            src="https://lottie.host/embed/d9365522-31b5-44e1-8c30-341274f0e7c7/GGFb6ZDf7j.lottie" width="100%"
+            height="300"></iframe>
+
+        </div>
+        <div class="col-md-7 pt-5 col-sm-12">
+          <h4 class="title mt-5">Shop Online</h4>
+          <p>eifkhnefwikhbefhiujfgbebuijfewguijgvi</p>
         </div>
       </div>
-    </div>
 
 
-    <div class="col">
-      <div class="card product-card">
-      <div class="position-relative">
-        <img src="/img/Creatine 6.jpg" class="card-img-top img-cover" alt="Adidas Cartoon Astronaut T-Shirt">
-        <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">10 BD</span>
-        <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-        <i class="bi bi-cart3"></i>
-        </button>
-      </div>
-      <div class="card-body">
-        <small class="d-block mb-1">Body Builder</small>
-          <h6 class="card-title mb-2">Creatine</h6>
-          <div class="text-warning" aria-label="4 stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-          </div>
+      <div class="row text-center" dir="ltr">
+        <div class="col-md-5 col-sm-12">
+          <iframe src="https://lottie.host/embed/7d32753a-5ebe-4222-b688-6e290d95c7d9/oVvBsDiGM5.lottie" width="100%"
+            height="300"></iframe>
+        </div>
+        <div class="col-md-7 pt-5 col-sm-12">
+          <h4 class="title mt-5">Shop Online</h4>
+          <p>eifkhnefwikhbefhiujfgbebuijfewguijgvi</p>
         </div>
       </div>
+
     </div>
+  </section>
 
 
-    <div class="col">
-      <div class="card product-card">
-      <div class="position-relative">
-        <img src="/img/Gloves 7.jpg" class="card-img-top img-cover" alt="Adidas Cartoon Astronaut T-Shirt">
-        <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">6 BD</span>
-        <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-        <i class="bi bi-cart3"></i>
-        </button>
-      </div>
-      <div class="card-body">
-        <small class="d-block mb-1">Adidas</small>
-          <h6 class="card-title mb-2">Gloves</h6>
-          <div class="text-warning" aria-label="4 stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-          </div>
-        </div>
-      </div>
-    </div>
 
-
-    <div class="col">
-      <div class="card product-card">
-      <div class="position-relative">
-        <img src="/img/Shaker 8.jpg" class="card-img-top img-cover" alt="Adidas Cartoon Astronaut T-Shirt">
-        <span class="badge bg-dark-subtle text-dark-emphasis position-absolute top-0 start-0 m-2">4 BD</span>
-        <button class="btn btn-sm btn-dark position-absolute bottom-0 end-0 m-2 cart-btn" aria-label="Add to cart">
-        <i class="bi bi-cart3"></i>
-        </button>
-      </div>
-      <div class="card-body">
-        <small class="d-block mb-1">Applied Nutrition</small>
-          <h6 class="card-title mb-2">Shaker</h6>
-          <div class="text-warning" aria-label="4 stars">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-          </div>
-        </div>
-      </div>
-      </div>   
-    </div>
-</div>
-</section>
 <div id="footer-placeholder"></div>
 
 
