@@ -18,7 +18,7 @@ html {
     transition: 0.5s ease;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--main-color) !important;
     border-radius: 15px;
     transition: 12 ease all;
@@ -29,13 +29,11 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    
 }
 
 span {
     color: var(--main-color);
 }
-
 
 #banner {
     display: flex;
@@ -43,80 +41,62 @@ span {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url(/img/—Pngtree—single\ dumbbell\ isolated\ on\ dark_19186486.jpg);   
+    background: url(/img/—Pngtree—single\ dumbbell\ isolated\ on\ dark_19186486.jpg);
     width: 100%;
     height: 50vh;
     background-size: cover;
     background-position: center;
 }
 
-
-
-
-
-/*products*/
-
-.title-header {
-    border-bottom: var(--main-color) solid 5px;
+.product-item.pop {
+    animation: popIn 0.45s ease-out;
 }
 
-.title{
-    color: var(--main-color);
+@keyframes popIn {
+    0% { transform: scale(0.85); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
 }
 
-
-
-.btn-primary {
-    background-color: var(--main-color);
-}
-
-.star {
-    color: gold;
-}
-
-.star:hover {
-    transition: all ease 1s;
-    cursor: pointer;
-}
-
-.card {
-    overflow: hidden;
-}
-
-.card img {
-    height: 300px;
+.cart-item-img {
     width: 100%;
-    cursor: pointer;
+    height: 120px;
+    object-fit: contain;
 }
 
-.card img:hover {
-    transform: scale(1.1);
-    transition: ease all 1s;
+.cart-item-card {
+    background-color: var(--snd-bg-color);
+    border: 1px solid #222;
+    color: var(--text-color);
 }
 
-.myicon {
-    color: var(--main-color);
-    font-size: 30px;
+.cardbg{
+    background-color: var(--plans-color);
+    color: white;
+    transition: transform .2s ease, 
+    box-shadow .2s ease; 
 }
 
-.card-body {
-  background-color: var(--plans-color); 
-  color: var(--text-color);
-}
-
-
-.product-card:hover { 
+.cardbg:hover{
     transform: translateY(-4px); 
-    box-shadow: 0 .5rem 1rem var(--main-color); 
-  }
-
-
-.card {
-  background-color: transparent;
-  border: none;
+    box-shadow: 0 .5rem 1rem var(--main-color) !important; 
 }
 
-  
-.services {
-    margin-top: 150px !important;
+.cart-item-col {
+  display: flex;
+}
+
+.cart-item-card {
+  flex: 1 1 auto;
+}
+
+.cart-item-img {
+  height: fit-content;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0; 
+}
+
+.btnbg{
+    background-color: var(--main-color);
 }
