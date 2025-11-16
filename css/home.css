@@ -38,6 +38,7 @@ object-fit: cover;
     transform: translateY(-4px); 
     box-shadow: 0 .5rem 1rem 
     var(--main-color); 
+    cursor: pointer;
   }
 
 .cart-btn { 

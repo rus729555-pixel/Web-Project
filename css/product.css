@@ -24,6 +24,7 @@ html {
     transition: 12 ease all;
     color: var(--text-color) !important;
     box-shadow: 0 0 1.6rem var(--main-color);
+    cursor: pointer;
 }
 
 body {
@@ -80,6 +81,7 @@ span {
 .cardbg:hover{
     transform: translateY(-4px); 
     box-shadow: 0 .5rem 1rem var(--main-color) !important; 
+    
 }
 
 .cart-item-col {
@@ -95,8 +97,72 @@ span {
   width: 100%;
   object-fit: cover;
   border-radius: 0; 
+  
 }
 
 .btnbg{
     background-color: var(--main-color);
+}
+
+/*Hot Deals*/
+
+.slide{
+    margin-bottom: 70px;
+}
+
+.top_product{
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--main-color);
+}
+
+.top_product h2 {
+    position: relative;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+}
+.top_product h2::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    z-index: 9;
+    border-left: 20px solid transparent;
+    background: var(--snd-bg-color);
+    left: 0;
+    border-bottom: 20px solid #6b02e2;
+}
+
+.top_product h2 i {
+    color: var(--text-color);
+}
+
+
+
+/*Scrollbar*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--main-color); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color); 
 }
