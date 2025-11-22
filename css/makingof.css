@@ -1,0 +1,15 @@
+.colorForCol{
+    background-color: rgb(0, 0, 0);
+    transition: transform .2s ease, 
+    box-shadow .2s ease; 
+      }
+.colorForCol:hover{
+    transform: translateY(-4px); 
+    box-shadow: 0 .5rem 1rem 
+    var(--main-color); 
+    }
+
+.makingofIMG{
+    margin: 2%;
+    border: 2px rgb(78, 78, 78) solid;
+}

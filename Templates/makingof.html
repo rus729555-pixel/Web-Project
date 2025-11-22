@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpha GYM — Making of</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/makingof.css" />
+</head>
+
+<body>
+  <nav id="navbar-placeholder"></nav>
+
+<main class="mt-5">
+<section class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+
+<div class="d-flex flex-column align-items-center gap-2 mb-4 text-center">
+  <h1 class="h3 m-0">Making <span>Of</span></h1>
+
+  <p class="p rounded-pill text-sm text-white-50">
+    This page shows how we planned our project design by using <span>canva</span> along with the justification for using <span>CSS</span> and <span>JavaScript</span>.
+  </p>
+</div>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+        <!-- Header && Footer -->
+          <div class="col">
+    <div class="card h-100 colorForCol">
+      <img src="/img/makingof/HeaderAndFooter.svg" class="makingofIMG" />
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <h2 class="h5 m-0">Header and Footer</h2>
+        </div>
+        <p class="mb-2">
+    By using <span>footer.js</span> and <span>navbar.js</span> we made the header and footer come from shared templates so we avoid repeating them. 
+    The header also changes based on the user status and plan and if no one is signed in then it only shows Home, Story, and Making Of.
+      </p>
+      </div>
+    </div>
+  </div>
+
+        <!-- Home Page -->
+        <div class="col">
+  <div class="card h-100 colorForCol">
+    <div class="row row-cols-2 g-2 p-2">
+      <div class="col">
+        <img src="/img/makingof/homepage1.svg" class="w-100 makingofIMG" alt="homepage1">
+      </div>
+      <div class="col">
+        <img src="/img/makingof/homepage2.svg" class="w-100 makingofIMG" alt="homepage2">
+      </div>
+      <div class="col">
+        <img src="/img/makingof/homepage3.svg" class="w-100  makingofIMG" alt="homepage3">
+      </div>
+      <div class="col">
+        <img src="/img/makingof/homepage4.svg" class="w-100  makingofIMG" alt="homepage4">
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <h2 class="h5 m-0">Home Page</h2>
+      </div>
+      <p class="mb-2">
+        On this page, clicker the register button shows a form using <span>login.js</span> (removes d-none from form and hide button).
+        if user registered the welcomeCard appears to great the user and let him chose a plan.
+        Using <span>plan.js</span> the chosen plan decides access: Basic can't use Nutrition, while Premium unlocks everything.
+    </p>
+    </div>
+
+  </div>
+</div>
+
+          <div class="col">
+    <div class="card h-100 colorForCol">
+      <img src="/img/makingof/Register.svg" class="makingofIMG" alt="Homepage 1" />
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <h2 class="h5 m-0">Register</h2>
+        </div>
+<p class="mb-2">
+  The inputs are validated in <span>login.js</span> (name length longer than 3, email format, and 8 digit phone). If everything is correct and valid then the data is saved in localStorage.
+</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  <div class="card h-100 colorForCol">
+    <div class="row g-2 p-2">
+
+      <div class="col-6 d-flex justify-content-center">
+        <img src="/img/makingof/Product1.svg" class="w-100  makingofIMG">
+      </div>
+
+      <div class="col-6 d-flex justify-content-center">
+        <img src="/img/makingof/Product2.svg" class="w-100  makingofIMG">
+      </div>
+
+      <div class="col-12 d-flex justify-content-center">
+        <img src="/img/makingof/Product3.svg" class="w-75  makingofIMG">
+      </div>
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <h2 class="h5 m-0">Products</h2>
+        </div>
+<p class="mb-2">
+Once the user is signed in, he will be able to see the products that we offer. 
+If he clicks on one, it will be added to the cart using localStorage below and then he can click Submit. 
+An image showing more info will be sent to the phone number he entered, handled by <span>products.js</span>.
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div class="col">
+    <div class="card h-100 colorForCol">
+      <img src="/img/makingof/Facilities.svg" class="makingofIMG" />
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <h2 class="h5 m-0">Facilities</h2>
+        </div>
+<p class="mb-2">
+There is no JavaScript for this page except for <span>checker.js</span> 
+that prevents users who didn't sign from accessing it.
+</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="col">
+    <div class="card h-100 colorForCol">
+      <img src="/img/makingof/Nutrition.svg" class="makingofIMG" />
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <h2 class="h5 m-0">Nutrition</h2>
+        </div>
+<p class="mb-2">
+In this page we wanted to use <span>nutrition.js</span> file that calculate the users required nutrition
+based on weight, height, age, and gender. also we check the users plan, and if its not allowed,
+an error will appear like the one shown above.
+</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="col">
+  <div class="card h-100 colorForCol">
+    <div class="row g-2 p-2">
+
+      <div class="col-6 d-flex justify-content-center">
+        <img src="/img/makingof/Story1.svg" class="w-100  makingofIMG">
+      </div>
+
+      <div class="col-6 d-flex justify-content-center">
+        <img src="/img/makingof/Story2.svg" class="w-100  makingofIMG">
+      </div>
+
+      <div class="col-12 d-flex justify-content-center">
+        <img src="/img/makingof/Story3.svg" class="w-75  makingofIMG">
+      </div>
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <h2 class="h5 m-0">Story</h2>
+        </div>
+<p class="mb-2">
+We don't use any additional JavaScript files here. This page is only meant to show our story and the difficulties we faced.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="col">
+  <div class="card h-100 colorForCol">
+    <div class="row g-2 p-2">
+
+      <div class="col-6 d-flex justify-content-center">
+        <img src="/img/makingof/ErrorPage.svg" class="w-100  makingofIMG">
+      </div>
+
+      <div class="col-6 d-flex justify-content-center">
+        <img src="/img/makingof/colors.svg" class="w-100  makingofIMG">
+      </div>
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <h2 class="h5 m-0">Justification for colors + ErrorPage</h2>
+        </div>
+<p class="mb-2">
+  We used purple to represent the sporty vibe while black for a cooler modern look and white as a clean neutral balance. We also created an error page handled by <span>Error.js</span>, that appears when someone tries to access the site without signing in.
+</p>
+</div>
+    </div>
+  </div>
+</div>
+
+ </div>
+          </div>
+          </div>
+    </section>
+  </main>
+<div id="footer-placeholder"></div>
+
+  <script src="../js/checkProtocol.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/footer.js"></script>
+  <script src="/js/plan.js"></script>
+</body>
+</html>
