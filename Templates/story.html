@@ -19,23 +19,23 @@
       <div class="col-12 col-lg-7">
         <h2 class="fw-bold mb-3"><span>Project Summary</span></h2>
         <p class="mb-0">
-        We created a user-friendly, fully-responsive multiple-page website for Athletica
-        Gym leveraging the power of Bootstrap 5. The branded header has a sticker navbar
+        We created a user friendly, responsive multiple page website for Athletica
+      Gym by using Bootstrap 5. The branded header has a sticker navbar
         with links to Home, Products, Facilities, Nutrition, Making of and Our Story.
-        For the first-run login, the user enters their name and phone number, and their
+        For the login, the user enters their name, phone number, and other information then their
         login state is saved in localStorage. When a user log offs the program, they
         experience a minimal registration flow. The Home area included a selected
-        product list that shows product badges, product pricing, and a prominent
-        More button that shows the rest of the product list. The Facilities section
+        product list that shows products and their prices, and a
+        More button that takes you to the product page so the user can place an order. The Facilities section
         included a grid view of the facility's equipment, which would adapt from
         mobile to desktop, and the Nutrition shown a clean layout for the calculator
         and related recommendations based on activity level. We defined three membership
-        plans, (Basic, Pro, and Premium) which resulted in premium features being gated
+        plans Basic, Pro, and Premium which resulted in premium features being gated
         for those premium members. We added member reviews to build consumer trust and
         social proof. Each page also offers a compact footer composed of social icons on
         the left and an email signup form on the far right. Overall, accessibility, multi-device
         display capabilities, consistent spacing and load time, fixed common layout bugs,
-        and clean display across devices were considered.
+        and clean display across devices all were considered.
         </p>
       </div>
 
@@ -53,9 +53,7 @@
         <h1 class="fw-bold mb-2"><span>Project Challenges &amp; Resolutions</span></h1>
         <p class="mb-4">
         Here are the main problems we faced during the project and the solutions we found. 
-        We aimed to keep the notes brief and easy to read while also documenting the fixes that could be reused throughout the project. 
-        By standardizing asset delivery, optimizing images, creating responsive layouts, and debugging, we improved reliability and reduced time to fix.
-        appropriate references for their configurations and your development cycle/behavior matched your published site.
+        We aimed to keep the notes brief and easy to read while also documenting the fixes that could be reused throughout the project.
         </p>
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Running from Local File Paths</h2>
@@ -68,23 +66,23 @@
         <h2 class="h5 fw-semibold mb-1 text-warning">Image Clarity &amp; Scaling</h2>
         <p>
           Some assets were low-resolution or stretched beyond their native size. We replaced weak images with
-          higher-resolution WebP/AVIF where possible, enforced stable aspect ratios with Bootstrap's ratio-* utilities. For example, ratio-4x3 and ratio-1x1. Also, we applied img-fluid to prevent overflow. 
+          higher-resolution WebP/AVIF where possible, also we enforced stable aspect ratios with Bootstrap's ratio-* utilities. For example, ratio-4x3 and ratio-1x1. Also, we applied img-fluid to prevent overflow. 
           When needed, we used object-fit: cover to avoid distortion; however, we didnt add lazy loading as the images were not much and adding it will be useless.
         </p>
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Responsiveness Across Devices</h2>
         <p>
         In the beginning, our layout was a bit messy. It would look normal on one screen, then when the window was shrunk, everything started moving in the wrong direction. 
-        We were using lg/md/sm, and mixing it with the grid, but still some sections stretched weird or ended up in random spots. 
-        We fixed it by actually using both the right way. First, we used the basic container/row/col setup, and then row-cols-* to control how many divs show in a row, and that solved the issue. 
-        We also fixed the spacing with simple g-* and py-* instead of using extra CSS. After that, we just kept testing on different screen sizes, zooming in and out, even checking keyboard tabbing, just to make sure the whole site worked properly.        
+        We were using the lg,md,sm in bootstrap then mixing it with the grid, but still some sections stretched in a weird way or ended up in random places. 
+        The solution was easy we started using both the right way. First, we used the basic container,row,col and then row-cols-* to control how many divs will be show in a row, and that solved the issue. 
+        Also we fixed the spacing with simple g-* and py-* instead of using extra CSS. After that, we just kept testing on different screen sizes, zooming in and out, even checking keyboard tabbing, just to make sure the whole site worked properly.        
       </p>
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Debugging &amp; Stability</h2>
         <p class="mb-0">
         Our first major problem was the login system, since it was the first JavaScript we ever wrote. 
-        We didn't know how to apply proper validation rules like enforcing a minimum name length, requiring an
-        8-digit password, or showing clear error messages so the login flow was unstable and didn't behave as expected.
+        We didn't know how to apply proper validation rules like putting a minimum name length, requiring an
+        8 digit phone number, or showing clear error messages so the login flow was unstable and didn't behave as expected.
         </p>
       </div>
 
@@ -132,34 +130,34 @@
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Front-end development</h2>
         <p class="mb-0">
-          We were no longer working for "it works," rather we worked on making something accessible to all, easy to maintain, and consistent throughout. 
-          By using HTML, we made the structure of the pages crystal clear: semantic tags, headers, and meaningful images helped a user understand the sections in one go.
-          Most of the work in CSS was required to do with styling and color, as Bootstrap handled much of the responsiveness. 
-          We set up the interface on a very simple, unified color scheme-purple, black, white, and yellow-which was applied uniformly in buttons, backgrounds, and highlights to provide users with a clean, recognizable UI.
-          Mainly, the work done in JavaScript is focused on the logic of a login and controlling the navbar: user authentication and access to certain pages/plans, while simultaneously blocking access for such features for unregistered users. Its aim is to ensure the site acted 
+          We were no longer working for "it works," but we worked on making something that is accessible to all, easy to maintain, and consistent throughout. 
+          With HTML, we made the structure of the pages clear: semantic tags, headers, and meaningful images helped a user understand the sections without having to read.
+        Most of the work in CSS was required to do with styling and color, as Bootstrap handled much of the responsiveness. 
+          We set up the interface on a very simple, purple, black, white, and yellow was applied in buttons, backgrounds, and highlights to provide users with a clean, recognizable UI.
+          Mainly, the work done in JavaScript is focused on the logic of a login and controlling the navbar: user authentication and access to certain pages/plans, while blocking access for such features for unregistered users. Its aim is to make sure that the site acted 
           appropriately for each level of access, while keeping the code readable.
         </p>
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Collaboration & communication</h2>
         <p class="mb-0">
-        We could communicate with each other very straightforwardly, and it went very smoothly. 
-        We made sure the responsibilities were assigned quite clearly: one person took a page, another took care of the JavaScript, log in, navbar, access control, while one more worked on the visuals and cleaned up some of the code, removing things we did not need. 
-        We would regularly update each other on the assigned tasks with some short and quick check-ins to let each other know when we moved things to the "done" from the "doing" section.
+        We communicated with each other very straightforwardly, and it went very smoothly. 
+        We made sure the responsibilities were assigned clearly: one person took a page, another took care of the JavaScript, log in, navbar, access control, while one more worked on the visuals and cleaned up some of the code, removing the things that we did not need. 
+        We were regularly updating each other on the assigned tasks with some short and quick checks to let each other know when we were done.
         Our last session dragged for almost five hours, which was the longest we have worked at one table on everything and eliminated inconsistencies together. 
         It helped us limit the amount of time we have probably worked in vain and also kept the final output clean and whole.
         </p>
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Responsive design with Bootstrap</h2>
         <p class="mb-0">
-          We used a mobile-first approach to allow responsive design and promote clean visuals with our final product. Most of the layout was done with Bootstrap's grid system. 
+          We used a mobile-first approach as thats what bootstrap use to allow responsive design and promote clean visuals with our final product. Most of the layout was done with Bootstrap's grid system. 
           The grids for images scale nicely with the usage of the row-cols-*, and we applied img-fluid consistently so the images don't stretch in the site.
           The layouts are still logical - text on the left, images on the right - and the breakpoints make sure the reshaping is done right on phone, tablet, and desktop.
         </p>
 
         <h2 class="h5 fw-semibold mb-1 text-warning">Problem-solving</h2>
         <p class="mb-0">
-          Whenever there were issues with file://, stretched images, elements moving around, or login not working - we would recreate the bug, 
-          change one thing and test it again. DevTools was our main tool - looking at console errors, inspecting elements, and using responsive to see visual glitches.
+          Whenever there were issues with file://, stretched images, elements moving around, or login not working we were recreating the bug, 
+          change one thing and test it again. DevTools in chrome was our main tool looking at console errors, inspecting elements, and using responsive to see visual glitches.
           After every bug was fixed we would test the login/register flow and main pages to confirm nothing else was broken.
         </p>
       </div>

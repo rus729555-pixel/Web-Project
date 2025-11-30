@@ -1,10 +1,10 @@
 <footer class="py-4 bg-dark text-center footer">
   <div class="container">
     <div class="d-flex gap-3 justify-content-center fs-4 mb-2">
-      <a href="#"><i class="bi bi-instagram iconcolor"></i></a>
-      <a href="#"><i class="bi bi-twitter-x iconcolor"></i></a>
-      <a href="#"><i class="bi bi-discord iconcolor"></i></a>
-      <a href="#"><i class="bi bi-whatsapp iconcolor"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram iconcolor"></i></a>
+      <a href="https://x.com" target="_blank"><i class="bi bi-twitter-x iconcolor"></i></a>
+      <a href="https://discord.com" target="_blank"><i class="bi bi-discord iconcolor"></i></a>
+      <a href="https://web.whatsapp.com" target="_blank"><i class="bi bi-whatsapp iconcolor"></i></a>
     </div>
 
     <section id="newsletter" class="text-center text-white">
@@ -19,13 +19,14 @@
 
         <form class="row justify-content-center g-2">
           <div class="col-12 col-md-6">
-            <input type="email" class="form-control" placeholder="Your email address">
+            <input type="email" id="emailInput" class="form-control" placeholder="Your email address">
           </div>
           <div class="col-12 col-md-auto">
-            <button type="submit" class="btn btn-warning text-dark fw-semibold w-100">
+            <button id="signUPforNEWS" type="button" class="btn btn-warning text-dark fw-semibold w-100">
               Sign Up
             </button>
           </div>
+          <div id="issignup" class="btn btnbg d-none"></div>
         </form>
       </div>
     </section>

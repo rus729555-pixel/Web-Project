@@ -243,5 +243,15 @@ cartItemsWrap.addEventListener("click", function (e) {
       ' and email ' +
       email +
       '.</div>';
+
+      let empty = document.getElementById("emptyfornew");
+      empty.classList.remove("d-none");
+
+      empty.addEventListener("click", function () {
+      cartItemsData = [];
+      saveCart();
+      renderCart();
+      empty.classList.add("d-none");
+      });
   });
 });
